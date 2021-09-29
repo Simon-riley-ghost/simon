@@ -19,86 +19,61 @@
 #    Inverte	\033[;7m	-
 #    Reset (remove formatação)	\033[0;0m
 
-# o codigo se trata de passar conhecimento para todo o publico sem fins lucrativos 
+# o codigo se trata de passar conhecimento para todo o publico sem fins lucrativos
 # desenvolvido por Miguel D.m
 
-#                                                   codigo                                                                                      
-from colorama import init
-init()
-import os
-import time
+#                                                   codigo
+import colorama, time, os
 os.system('cls')
+#   executara uma aba de login não grafica você tera que ter senha e usuario para entra
 login = 1
 if login == 1:
-    user = 't'
+    user = 'miguel'
     if input('User: ') .strip() == user:
-        print('\033[1;35mBuascando dados...')
-    else:
+        print('\033[1;35mBuascando dados...') # coloquei apenas por stazk
+    else: # caso não exista usuario ele ira dizer espera um time e fecha o progrma
         print('usuario não existe')
         time.sleep(3)
         os.system('cls')
         exit()
-    time.sleep(4)
+    time.sleep(1)
     print('\033[1;35mdados encontrados...')
-    print ('\033[1;35minsira a senha para confirma identidade..')
-    snh = 't'
-    if input('Pass: ') .strip() == snh:
+    print ('\033[1;35minsira a senha para confirma identidade..') # ele ira te pedir a senha e a senha tem que ser igual
+    snh = '1812'
+    if input('Pass: ') .strip() == snh: #vai confirma se a senha e valida
      print ('''\033[1;35m
     informação de login:
-    Nome > Simon Riley 
+    Nome > Simon Riley
     Codenome > Ghost
-    Frase > Um novo dia a mesma merda 
+    Frase > Um novo dia a mesma merda
     ''')
-    else:
+    else:  # caso a senha não seja ele irar fechar o script
         print ('\033[1;31mOps você não tem autorização para entrar no painel')
         exit()
 ans=True
 while ans:
-    print('\033[1;35mpainel dedicado aos estudos então so tem conteudo aqui \n[1] sobre o nazismo \n[2] sobre o comunismo \n[3] jogos para pc \n[4] sobre a guerra fria \n[5] historia do brasil \n[6] sobre a revolução industrial \n[7] sair \n[8] caso o limpador automatico nn limpe')
+    print('\033[1;35mpainel dedicado aos estudos então so tem conteudo aqui \n[1] sobre o nazismo \n[2] sobre o comunismo \n[3] jogos para pc \n[4] sobre a guerra fria \n[5] historia do brasil \n[6] sobre a revolução industrial \n[7] sair \n[8] caso o limpador automatico nn limpe \n[9] proximo menu\n[10] sekku')
     dec = input("opção: ")
     if dec == '1':
         os.system('start https://es.wikipedia.org/wiki/Nazismo')
     elif dec == '2':
         os.system('start https://es.wikipedia.org/wiki/Comunismo')
     elif dec == '3':
-        print ('[1] cod 4 mw \n[2] cod mw 2 \n[3] need for speed \n[4] sniper elite 2 e 3 \n[4] brawahalla \n[5] GTA SA, GTA 3, GTA Vice City e MTA ')
+        print ('cod 4 mw \ncod mw 2 \nneed for speed \nsniper elite 2 e 3 \nbrawahalla \nGTA SA, GTA 3, GTA Vice City e MTA ')
     elif dec == '4':
         os.system('start https://es.wikipedia.org/wiki/Guerra_Fr%C3%ADa')
     elif dec == '5':
         os.system('start https://es.wikipedia.org/wiki/Brasil')
     elif dec == '6':
         os.system('start https://es.wikipedia.org/wiki/Revolu%C3%A7%C3%A3o_industrial')
-    elif dec == '7':    
+    elif dec == '7':
         exit()
     elif dec == '8':
         os.system('cls')
-    ans= None
+    elif dec == '9':
+        os.system('cls')
+        from menus import a1
+    elif dec == '10':
+        from menus import sekku
 else:
-    print('tente novamente ...')
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    print('opção invalida')
